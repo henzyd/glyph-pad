@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
       },
       screens: {
         smallMobile: { max: "320px" },
