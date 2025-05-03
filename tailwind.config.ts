@@ -1,11 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
+
 export default {
-  darkMode: ["class"],
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
         jost: ["Jost", "sans-serif"],
+      },
+      maxWidth: {
+        App: "1700px",
       },
       screens: {
         smallMobile: { max: "320px" },
@@ -28,5 +31,4 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-};
+} satisfies Config;
