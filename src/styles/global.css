@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "./fonts.css";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+* {
+  font-family: "Jost", sans-serif;
+}

@@ -1,0 +1,22 @@
+---
+import Layout from "./layout.astro";
+import Sidebar from "~/widgets/layout/sidebar";
+
+const { pathname } = Astro.url;
+---
+
+<Layout>
+  <div class="max-w-App mx-auto flex w-full grow gap-6 p-6">
+    <Sidebar pathname={pathname} />
+    <main class="flex w-full flex-col divide-y divide-zinc-200/90 rounded-2xl bg-white">
+      <header class="p-4 px-6">
+        <h1 class="text-xl font-semibold capitalize">
+          Note Lists{pathname.slice(1) ? ` - ${pathname.slice(1)}` : ""}
+        </h1>
+      </header>
+      <div class="p-8">
+        <slot />
+      </div>
+    </main>
+  </div>
+</Layout>
