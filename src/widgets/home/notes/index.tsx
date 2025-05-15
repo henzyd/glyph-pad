@@ -39,6 +39,10 @@ function InnerNotes({
   );
 }
 
-export default function Notes() {
-  return <Container>{(props) => <InnerNotes {...props} />}</Container>;
+type Props = {
+  initialNotes: Note[];
+};
+
+export default function Notes({ initialNotes }: Props) {
+  return <Container initialNotes={initialNotes}>{(props) => <InnerNotes {...props} />}</Container>;
 }

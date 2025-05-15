@@ -1,8 +1,9 @@
 ---
 import MainLayout from "~/layouts/main-layout.astro";
 import Notes from "~/widgets/home/notes";
+import initialNotes from "~/data/notes.json";
 ---
 
 <MainLayout>
-  <Notes client:only />
+  <Notes initialNotes={initialNotes} client:load />
 </MainLayout>

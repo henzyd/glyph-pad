@@ -1,38 +1,49 @@
 import { Plus, Tag, SquarePen, Star } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
+import initialNotes from "~/data/notes.json";
 
-const labels = [
-  {
-    name: "Personal",
-    dotClass: "bg-purple-700",
-  },
-  {
-    name: "Work",
-    dotClass: "bg-green-700",
-  },
-  {
-    name: "Social",
-    dotClass: "bg-orange-700",
-  },
-  {
-    name: "Important",
-    dotClass: "bg-blue-700",
-  },
-];
+function Label({ name, hex_code, pathname }: Label & { pathname: string }) {
+  const href = "/" + name.toLowerCase();
+  const isMatch = pathname.startsWith(href);
 
-function Label({ name, dotClass }: { name: string; dotClass: string }) {
   return (
     <a href={"/" + name.toLowerCase()}>
-      <Button className="group w-full justify-start gap-3 !p-5" variant="ghost">
-        <span className={cn("size-2.5 rounded-full", dotClass)}></span>
-        <span className="text-zinc-700 group-hover:text-purple-700">{name}</span>
+      <Button
+        className={cn("group w-full justify-start gap-3 !p-5", {
+          "bg-violet-100": isMatch,
+        })}
+        variant="ghost"
+      >
+        <span
+          className={cn("size-2.5 rounded-full")}
+          style={{
+            backgroundColor: hex_code,
+          }}
+        ></span>
+        <span
+          className={cn("text-zinc-700 group-hover:text-purple-700", {
+            "text-purple-700": isMatch,
+          })}
+        >
+          {name}
+        </span>
       </Button>
     </a>
   );
 }
 
-export default function Sidebar() {
+type Props = {
+  pathname: string;
+};
+
+export default function Sidebar({ pathname }: Props) {
+  const labels = Array.from(
+    new Map(
+      (initialNotes as Note[]).map((note) => note.label).map((label) => [label.id, label])
+    ).values()
+  );
+
   return (
     <aside className="flex w-[300px] grow flex-col gap-8 rounded-2xl bg-white p-4">
       <div className="flex justify-center px-8">
@@ -43,13 +54,23 @@ export default function Sidebar() {
       </div>
       <div className="flex flex-col gap-1">
         <a href="/">
-          <Button className="w-full justify-start gap-3 !p-5" variant="ghost">
+          <Button
+            className={cn("group w-full justify-start gap-3 !p-5", {
+              "bg-violet-100 text-violet-500": pathname === "/",
+            })}
+            variant="ghost"
+          >
             <SquarePen />
             <span className="text-zinc-700">All</span>
           </Button>
         </a>
         <a href="/favorites">
-          <Button className="w-full justify-start gap-3 !p-5" variant="ghost">
+          <Button
+            className={cn("group w-full justify-start gap-3 !p-5", {
+              "bg-violet-100 text-violet-500": pathname.startsWith("/favorites"),
+            })}
+            variant="ghost"
+          >
             <Star className="size-4" />
             <span className="text-zinc-700">Favorites</span>
           </Button>
@@ -62,9 +83,9 @@ export default function Sidebar() {
             <small>Labels</small>
           </h6>
         </div>
-        <div>
+        <div className="flex flex-col gap-1">
           {labels.map((label, index) => (
-            <Label {...label} key={index} />
+            <Label {...label} key={index} pathname={pathname} />
           ))}
         </div>
       </div>
