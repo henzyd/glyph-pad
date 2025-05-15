@@ -1,0 +1,22 @@
+---
+import MainLayout from "~/layouts/main-layout.astro";
+import Notes from "~/widgets/home/notes";
+import initialNotes from "~/data/notes.json";
+
+export function getStaticPaths() {
+  const labels = (initialNotes as Note[]).map((note) => note.label);
+  const uniqueLabels = Array.from(new Map(labels.map((label) => [label.id, label])).values());
+
+  return (uniqueLabels as Label[]).map((label) => ({
+    params: { label: label.name },
+    props: { label },
+  }));
+}
+
+const { label } = Astro.params;
+---
+
+<MainLayout>
+  <div>{label}</div>
+  <Notes client:only />
+</MainLayout>
