@@ -2,7 +2,7 @@ type Note = {
   id: string;
   title: string;
   description: string;
-  labels: Label[];
+  label: Label;
   created_by: User;
   created_at: string;
   updated_at: string;
