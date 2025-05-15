@@ -3,15 +3,13 @@
     "id": "note_001",
     "title": "Note Title 1",
     "description": "This is the description for note 1.",
-    "labels": [
-      {
-        "id": "label_001",
-        "name": "Work",
-        "hex_code": "#4CAF50",
-        "created_at": "2025-05-01T09:00:00Z",
-        "updated_at": "2025-05-01T09:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_001",
+      "name": "Work",
+      "hex_code": "#4caf506e",
+      "created_at": "2025-05-01T09:00:00Z",
+      "updated_at": "2025-05-01T09:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -26,15 +24,13 @@
     "id": "note_002",
     "title": "Note Title 2",
     "description": "This is the description for note 2.",
-    "labels": [
-      {
-        "id": "label_002",
-        "name": "Urgent",
-        "hex_code": "#F44336",
-        "created_at": "2025-05-02T10:00:00Z",
-        "updated_at": "2025-05-02T10:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_002",
+      "name": "Urgent",
+      "hex_code": "#f4433682",
+      "created_at": "2025-05-02T10:00:00Z",
+      "updated_at": "2025-05-02T10:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -49,15 +45,13 @@
     "id": "note_003",
     "title": "Note Title 3",
     "description": "This is the description for note 3.",
-    "labels": [
-      {
-        "id": "label_003",
-        "name": "Personal",
-        "hex_code": "#2196F3",
-        "created_at": "2025-05-03T11:00:00Z",
-        "updated_at": "2025-05-03T11:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_003",
+      "name": "Personal",
+      "hex_code": "#2196f380",
+      "created_at": "2025-05-03T11:00:00Z",
+      "updated_at": "2025-05-03T11:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -72,15 +66,13 @@
     "id": "note_004",
     "title": "Note Title 4",
     "description": "This is the description for note 4.",
-    "labels": [
-      {
-        "id": "label_001",
-        "name": "Work",
-        "hex_code": "#4CAF50",
-        "created_at": "2025-05-01T09:00:00Z",
-        "updated_at": "2025-05-01T09:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_001",
+      "name": "Work",
+      "hex_code": "#4caf506e",
+      "created_at": "2025-05-01T09:00:00Z",
+      "updated_at": "2025-05-01T09:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -95,15 +87,13 @@
     "id": "note_005",
     "title": "Note Title 5",
     "description": "This is the description for note 5.",
-    "labels": [
-      {
-        "id": "label_002",
-        "name": "Urgent",
-        "hex_code": "#F44336",
-        "created_at": "2025-05-02T10:00:00Z",
-        "updated_at": "2025-05-02T10:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_002",
+      "name": "Urgent",
+      "hex_code": "#f4433682",
+      "created_at": "2025-05-02T10:00:00Z",
+      "updated_at": "2025-05-02T10:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -118,15 +108,13 @@
     "id": "note_006",
     "title": "Note Title 6",
     "description": "This is the description for note 6.",
-    "labels": [
-      {
-        "id": "label_003",
-        "name": "Personal",
-        "hex_code": "#2196F3",
-        "created_at": "2025-05-03T11:00:00Z",
-        "updated_at": "2025-05-03T11:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_003",
+      "name": "Personal",
+      "hex_code": "#2196f380",
+      "created_at": "2025-05-03T11:00:00Z",
+      "updated_at": "2025-05-03T11:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -141,15 +129,13 @@
     "id": "note_007",
     "title": "Note Title 7",
     "description": "This is the description for note 7.",
-    "labels": [
-      {
-        "id": "label_001",
-        "name": "Work",
-        "hex_code": "#4CAF50",
-        "created_at": "2025-05-01T09:00:00Z",
-        "updated_at": "2025-05-01T09:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_001",
+      "name": "Work",
+      "hex_code": "#4caf506e",
+      "created_at": "2025-05-01T09:00:00Z",
+      "updated_at": "2025-05-01T09:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -164,15 +150,13 @@
     "id": "note_008",
     "title": "Note Title 8",
     "description": "This is the description for note 8.",
-    "labels": [
-      {
-        "id": "label_002",
-        "name": "Urgent",
-        "hex_code": "#F44336",
-        "created_at": "2025-05-02T10:00:00Z",
-        "updated_at": "2025-05-02T10:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_002",
+      "name": "Urgent",
+      "hex_code": "#f4433682",
+      "created_at": "2025-05-02T10:00:00Z",
+      "updated_at": "2025-05-02T10:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -187,15 +171,13 @@
     "id": "note_009",
     "title": "Note Title 9",
     "description": "This is the description for note 9.",
-    "labels": [
-      {
-        "id": "label_003",
-        "name": "Personal",
-        "hex_code": "#2196F3",
-        "created_at": "2025-05-03T11:00:00Z",
-        "updated_at": "2025-05-03T11:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_003",
+      "name": "Personal",
+      "hex_code": "#2196f380",
+      "created_at": "2025-05-03T11:00:00Z",
+      "updated_at": "2025-05-03T11:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
@@ -210,15 +192,13 @@
     "id": "note_010",
     "title": "Note Title 10",
     "description": "This is the description for note 10.",
-    "labels": [
-      {
-        "id": "label_001",
-        "name": "Work",
-        "hex_code": "#4CAF50",
-        "created_at": "2025-05-01T09:00:00Z",
-        "updated_at": "2025-05-01T09:00:00Z"
-      }
-    ],
+    "label": {
+      "id": "label_001",
+      "name": "Work",
+      "hex_code": "#4caf506e",
+      "created_at": "2025-05-01T09:00:00Z",
+      "updated_at": "2025-05-01T09:00:00Z"
+    },
     "created_by": {
       "id": "user_123",
       "ip": "192.168.1.5",
