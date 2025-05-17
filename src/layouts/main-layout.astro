@@ -7,7 +7,7 @@ const { pathname } = Astro.url;
 
 <Layout>
   <div class="max-w-App mx-auto flex w-full grow gap-6 p-6">
-    <Sidebar pathname={pathname} />
+    <Sidebar pathname={pathname} client:load />
     <main class="flex w-full flex-col divide-y divide-zinc-200/90 rounded-2xl bg-white">
       <header class="p-4 px-6">
         <h1 class="text-xl font-semibold capitalize">

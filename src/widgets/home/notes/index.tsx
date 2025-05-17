@@ -30,6 +30,10 @@ function InnerNotes({
 
   drop(ref);
 
+  if (!notes.length) {
+    return <div className="flex items-center justify-between">Note not found</div>;
+  }
+
   return (
     <div className="largeTabletAndBelow:grid-cols-2 grid grid-cols-3 gap-6" ref={ref}>
       {notes.map((note, index) => (

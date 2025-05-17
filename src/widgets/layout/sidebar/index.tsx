@@ -2,6 +2,7 @@ import { Plus, Tag, SquarePen, Star } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { cn } from "~/lib/utils";
 import initialNotes from "~/data/notes.json";
+import AddNote from "./add-note";
 
 function Label({ name, hex_code, pathname }: Label & { pathname: string }) {
   const href = "/" + name.toLowerCase();
@@ -46,12 +47,7 @@ export default function Sidebar({ pathname }: Props) {
 
   return (
     <aside className="flex w-[300px] grow flex-col gap-8 rounded-2xl bg-white p-4">
-      <div className="flex justify-center px-8">
-        <Button className="w-full gap-1 rounded-full">
-          <Plus />
-          Add Notes
-        </Button>
-      </div>
+      <AddNote />
       <div className="flex flex-col gap-1">
         <a href="/">
           <Button

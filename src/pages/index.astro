@@ -1,9 +1,12 @@
 ---
 import MainLayout from "~/layouts/main-layout.astro";
 import Notes from "~/widgets/home/notes";
-import initialNotes from "~/data/notes.json";
+// import initialNotes from "~/data/notes.json";
+import NoteServices from "~/services/notes";
+
+const notes = await NoteServices.getAll();
 ---
 
 <MainLayout>
-  <Notes initialNotes={initialNotes} client:load />
+  <Notes initialNotes={notes} client:load />
 </MainLayout>
